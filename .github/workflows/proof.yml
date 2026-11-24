@@ -1,0 +1,13 @@
+name: Public JavaScript action proof
+on: push
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: echo PUBLIC_JS_BEFORE_2F63
+      - uses: actions/hello-world-javascript-action@79ac0da13ee392da3fdd151813d5ce4658cb7e27
+        with:
+          who-to-greet: proof-public-js-73
+      - shell: bash
+        run: echo PUBLIC_JS_AFTER_2F63
